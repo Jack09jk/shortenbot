@@ -12,8 +12,8 @@ async def enaclk(event):
         person = await m.get_sender()
         user=person.first_name
         rantext = ''.join(random.choice(string.ascii_lowercase + string.digits) for _ in range(7))
-        api_token = '690b490e0f197d97b059e32b56a7639c1ca936a2'
-        req = requests.get('https://clicksfly.com/api?api={}&url={}&alias={}'.format(api_token, m.text, rantext)).json()
+        api_token = 'a43deab308812d554d39e3a8560e705b10e670cd'
+        req = requests.get('https://afly.in/api?api={}&url={}&alias={}'.format(api_token, m.text, rantext)).json()
         if(req["status"] == 'error'):
           smsg = req["message"]
         else:
